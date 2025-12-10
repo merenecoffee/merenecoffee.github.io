@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merene Coffee &amp; Eatery - Singgah Sejenak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* WARNA UTAMA + TYPOGRAPHY */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0b0b0f',
+              base: '#1a120b',
+              accent: '#c48a5a',
+              cream: '#f4efe6',
+              soft: '#e9e1d7'
+            }
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body: ['"Manrope"', 'sans-serif']
+          },
+          boxShadow: {
+            card: '0 18px 40px -18px rgba(26, 18, 11, 0.35)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="icon" type="image/png" href="assets/logo.jpg" class="rounded-full" />
+</head>
+
+<body
+  class="bg-brand-cream text-slate-900 font-body antialiased selection:bg-brand-accent selection:text-brand-dark scroll-smooth">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-white via-brand-cream to-brand-soft"></div>
+  <!-- NAMA CAFE -->
+  <header class="sticky top-0 z-50">
+    <nav class="backdrop-blur bg-white/85 border-b border-white/60 shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <a href="#hero" class="flex items-center gap-3">
+          <div
+            class="h-10 w-10 rounded-full bg-white border border-brand-base/30 shadow-sm overflow-hidden grid place-items-center">
+            <img src="assets/logo.jpg" alt="Logo Merene Coffee &amp; Eatery" class="h-full w-full object-cover">
+          </div>
+          <div>
+            <p class="font-heading text-lg text-brand-base">Merene Coffee &amp; Eatery</p>
+            <p class="text-xs text-slate-500">Singgah Sejenak | Pejaten Barat</p>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#story" class="text-slate-700 hover:text-brand-base transition">Story</a>
+          <a href="#menu" class="text-slate-700 hover:text-brand-base transition">Menu</a>
+          <a href="#vibes" class="text-slate-700 hover:text-brand-base transition">Vibes</a>
+          <a href="#testimonials" class="text-slate-700 hover:text-brand-base transition">Testimonials</a>
+          <a href="#contact" class="text-slate-700 hover:text-brand-base transition">Contact</a>
+          <!-- CTA BUTTON LINK -->
+          <a href="https://wa.me/6281362231966"
+            class="px-4 py-2 rounded-full bg-brand-base text-white shadow-md hover:-translate-y-0.5 hover:shadow-lg transition">Chat
+            / Reservasi</a>
+        </div>
+        <button id="mobileMenuBtn"
+          class="md:hidden text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-accent p-2 rounded-full"
+          aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+        <div class="px-4 pb-4 space-y-2 text-sm font-medium bg-white/90">
+          <a href="#story" class="block px-3 py-2 rounded-lg hover:bg-brand-soft/60">Story</a>
+          <a href="#menu" class="block px-3 py-2 rounded-lg hover:bg-brand-soft/60">Menu</a>
+          <a href="#vibes" class="block px-3 py-2 rounded-lg hover:bg-brand-soft/60">Vibes</a>
+          <a href="#testimonials" class="block px-3 py-2 rounded-lg hover:bg-brand-soft/60">Testimonials</a>
+          <a href="#contact" class="block px-3 py-2 rounded-lg hover:bg-brand-soft/60">Contact</a>
+          <a href="https://wa.me/6281362231966"
+            class="block px-3 py-2 rounded-lg bg-brand-base text-white text-center shadow hover:-translate-y-0.5 transition">Chat
+            / Reservasi</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-base via-black to-black opacity-75"></div>
+        <img src="/assets/vibes.jpg" alt="Rooftop kaca Merene Coffee &amp; Eatery di Pejaten"
+          class="w-full h-full object-cover" />
+      </div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
+        <div class="max-w-3xl space-y-6 reveal">
+          <!-- HEADLINE HERO -->
+          <p class="uppercase tracking-[0.3em] text-xs text-brand-soft">Cozy, homey, tiga lantai</p>
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight">Merene Coffee &amp; Eatery: Singgah
+            Sejenak, kerja nyaman sampai sunset.</h1>
+          <!-- SUBHEADLINE HERO -->
+          <p class="text-base sm:text-lg text-white/85">Kafe 3 lantai di Pejaten dengan indoor AC, rooftop kaca buat
+            sunset-an, WiFi kencang, dan kopi andalan Butterscotch. Nyaman untuk WFC, meeting, atau nongkrong santai
+            bareng teman.</p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+            <!-- CTA BUTTON LINK -->
+            <a href="https://wa.me/6281362231966"
+              class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white text-brand-base font-semibold shadow-lg hover:-translate-y-1 hover:shadow-xl transition">Chat
+              WhatsApp</a>
+            <a href="#menu"
+              class="inline-flex items-center justify-center px-5 py-3 rounded-full border border-white/40 text-white font-semibold hover:bg-white/10 transition">Lihat
+              menu</a>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-white/80">
+            <div class="flex -space-x-2">
+              <span
+                class="h-9 w-9 rounded-full bg-white/85 grid place-items-center text-brand-base font-semibold text-xs">PJT</span>
+              <span
+                class="h-9 w-9 rounded-full bg-white/70 grid place-items-center text-brand-base font-semibold text-xs">PSM</span>
+              <span
+                class="h-9 w-9 rounded-full bg-white/60 grid place-items-center text-brand-base font-semibold text-xs">JKT</span>
+            </div>
+            <p>Tempat WFC &amp; sunset rooftop favorit mahasiswa dan pekerja remote di Jakarta Selatan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4 reveal">
+          <p class="text-xs uppercase tracking-[0.25em] text-brand-base/80">Tentang Merene Coffee &amp; Eatery</p>
+          <!-- CERITA CAFE -->
+          <h2 class="font-heading text-3xl sm:text-4xl text-brand-base">Homey, estetik, dan siap nemenin WFC sampai
+            senja.</h2>
+          <p class="text-slate-700 leading-relaxed">Merene Coffee &amp; Eatery adalah kafe 3 lantai di Pejaten Barat,
+            Pasar Minggu. Indoor-nya adem, colokan berlimpah, rooftop kaca jadi spot favorit golden hour, dan stafnya
+            ramah banget buat nemenin kerja lama.</p>
+          <p class="text-slate-700 leading-relaxed">Signature Butterscotch Coffee disajikan hangat maupun dingin, dengan
+            pilihan menu variatif dari ramen sampai pizza truffle. Harga tetap ramah untuk kawasan Jaksel, cocok untuk
+            meeting santai, belajar, atau sekadar singgah sejenak.</p>
+          <div class="flex gap-4">
+            <div class="p-4 rounded-2xl bg-white shadow-card border border-white/70">
+              <p class="text-3xl font-heading text-brand-base">4.7/5</p>
+              <p class="text-xs uppercase tracking-wide text-slate-500">Rating Google Maps</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white shadow-card border border-white/70">
+              <p class="text-3xl font-heading text-brand-base">3 lantai</p>
+              <p class="text-xs uppercase tracking-wide text-slate-500">Indoor AC &amp; rooftop sunset</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative reveal">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-card border border-white/70">
+            <img src="/assets/vibes.jpg" alt="Interior dan rooftop estetik di Merene Coffee &amp; Eatery Pejaten"
+              class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-brand-base text-white px-5 py-4 rounded-2xl shadow-card">
+            <p class="font-heading text-lg">Cozy indoor + rooftop kaca.</p>
+            <p class="text-sm text-brand-accent">Tempat kerja, nongkrong, dan sunset-an favorit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="bg-white/80 border-y border-white/60 py-16 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div class="space-y-2 reveal">
+            <p class="text-xs uppercase tracking-[0.25em] text-brand-base/80">Menu Highlights</p>
+            <!-- DAFTAR MENU -->
+            <h2 class="font-heading text-3xl sm:text-4xl text-brand-base">Signature coffee &amp; all-day bites.</h2>
+            <p class="text-slate-700 max-w-2xl">Cicipi Butterscotch Coffee andalan, pizza truffle gurih, ramen hangat,
+              sampai ayam bakar madu. Menu variatif yang cocok buat WFC, meeting, atau chill sore.</p>
+          </div>
+          <a href="https://drive.google.com/file/d/15j6kdYdwEzRmk2uWsl6EaSSdBCjz2b2C/view"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-brand-base hover:text-brand-dark transition reveal">
+            Menu Lengkap
+            <span aria-hidden="true">-&gt;</span>
+          </a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="reveal p-5 rounded-2xl bg-white shadow-card border border-white/70 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="flex items-start justify-between">
+              <h3 class="font-heading text-xl text-brand-base">Butterscotch Coffee</h3>
+              <span class="text-brand-accent font-semibold">Rp 49K</span>
+            </div>
+            <p class="text-sm text-slate-700 mt-2">Kopi susu creamy dengan sirup butterscotch ala Merene; manis pas,
+              nikmat dingin atau panas.</p>
+          </div>
+          <div
+            class="reveal p-5 rounded-2xl bg-white shadow-card border border-white/70 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="flex items-start justify-between">
+              <h3 class="font-heading text-xl text-brand-base">Truffle Mushroom Pizza</h3>
+              <span class="text-brand-accent font-semibold">Rp 106K</span>
+            </div>
+            <p class="text-sm text-slate-700 mt-2">Pizza tipis dengan jamur truffle dan mozzarella yang wangi gurih,
+              pas untuk sharing.</p>
+          </div>
+          <div
+            class="reveal p-5 rounded-2xl bg-white shadow-card border border-white/70 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="flex items-start justify-between">
+              <h3 class="font-heading text-xl text-brand-base">Merene House Ramen</h3>
+              <span class="text-brand-accent font-semibold">Rp 67K</span>
+            </div>
+            <p class="text-sm text-slate-700 mt-2">Ramen kuah kaldu ayam dan miso ala Merene, disajikan hangat dengan
+              telur dan nori.</p>
+          </div>
+          <div
+            class="reveal p-5 rounded-2xl bg-white shadow-card border border-white/70 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="flex items-start justify-between">
+              <h3 class="font-heading text-xl text-brand-base">Merene Ayam Bakar</h3>
+              <span class="text-brand-accent font-semibold">~Rp 80K</span>
+            </div>
+            <p class="text-sm text-slate-700 mt-2">Ayam bakar madu dengan nasi, acar, kerupuk udang, dan sambal bajak
+              pedas manis.</p>
+          </div>
+          <div
+            class="reveal p-5 rounded-2xl bg-white shadow-card border border-white/70 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="flex items-start justify-between">
+              <h3 class="font-heading text-xl text-brand-base">Sunset Latte</h3>
+              <span class="text-brand-accent font-semibold">Seasonal</span>
+            </div>
+            <p class="text-sm text-slate-700 mt-2">Latte lembut dengan tone manis-karamel, teman wajib menikmati sunset
+              di rooftop lantai 3.</p>
+          </div>
+          <div
+            class="reveal p-5 rounded-2xl bg-white shadow-card border border-white/70 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="flex items-start justify-between">
+              <h3 class="font-heading text-xl text-brand-base">Shareable Platter</h3>
+              <span class="text-brand-accent font-semibold">Varian</span>
+            </div>
+            <p class="text-sm text-slate-700 mt-2">Pilihan snack untuk rame-rame di rooftop: fries, wings, dan bites
+              crunchy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vibes" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-6">
+      <div class="space-y-2 reveal">
+        <p class="text-xs uppercase tracking-[0.25em] text-brand-base/80">Vibes</p>
+        <!-- GALLERY -->
+        <h2 class="font-heading text-3xl sm:text-4xl text-brand-base">Homey, estetik, dan sunset-ready.</h2>
+        <p class="text-slate-700 max-w-2xl">Indoor adem untuk fokus kerja, rooftop kaca buat menikmati senja, dan banyak
+          sudut instagramable di tiap lantai.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="relative overflow-hidden rounded-2xl reveal">
+          <img src="/assets/menu.jpg" class="w-full h-56 object-cover hover:scale-105 transition"
+            alt="Nongkrong Santai - spot cozy buat kumpul bareng sahabat di Merene">
+        </div>
+        <div class="relative overflow-hidden rounded-2xl reveal">
+          <img src="/assets/menu2.jpg" class="w-full h-56 object-cover hover:scale-105 transition"
+            alt="Sunset Rooftop - view senja Jakarta dari rooftop kaca lantai 3">
+        </div>
+        <div class="relative overflow-hidden rounded-2xl reveal">
+          <img src="/assets/menu3.jpg" class="w-full h-56 object-cover hover:scale-105 transition"
+            alt="Rooftop Chill - obrolan sore ditemani kopi andalan">
+        </div>
+        <div class="relative overflow-hidden rounded-2xl reveal">
+          <img src="/assets/menu4.jpg" class="w-full h-56 object-cover hover:scale-105 transition"
+            alt="Kerja Nyaman - WiFi kencang dan colokan banyak untuk WFC">
+        </div>
+        <div class="relative overflow-hidden rounded-2xl reveal">
+          <img src="/assets/menu5.jpg" class="w-full h-56 object-cover hover:scale-105 transition"
+            alt="Desain Estetik - interior homey dengan warna earthy">
+        </div>
+        <div class="relative overflow-hidden rounded-2xl reveal">
+          <img src="/assets/menu6.jpg" class="w-full h-56 object-cover hover:scale-105 transition"
+            alt="Focus Zone - meja luas dan cahaya natural untuk belajar dan kerja">
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="bg-brand-base text-brand-cream py-16 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div class="space-y-2 reveal">
+            <p class="text-xs uppercase tracking-[0.25em] text-brand-soft/80">Testimonials</p>
+            <!-- TESTIMONI -->
+            <h2 class="font-heading text-3xl sm:text-4xl">Favorit karena cozy, lengkap, dan ramah.</h2>
+          </div>
+          <p class="text-brand-soft max-w-lg reveal">Ringkasan review: rating ~4.7/5, kopi dan makanan enak, ruang luas
+            tiga lantai dengan rooftop sunset, stafnya sigap dan friendly.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <figure class="reveal p-6 rounded-2xl bg-white/5 border border-white/10 shadow-card">
+            <blockquote class="text-brand-soft leading-relaxed">"Butterscotch-nya juara, tempatnya luas dan cozy buat
+              kerja lama. Stafnya ramah dan sigap."</blockquote>
+            <figcaption class="mt-4 font-semibold text-brand-cream">Google Maps ~4.7/5</figcaption>
+          </figure>
+          <figure class="reveal p-6 rounded-2xl bg-white/5 border border-white/10 shadow-card">
+            <blockquote class="text-brand-soft leading-relaxed">"Rooftop kaca-nya jadi spot favorit golden hour.
+              Interior tiap lantai estetik dan instagramable."</blockquote>
+            <figcaption class="mt-4 font-semibold text-brand-cream">Blog &amp; media review</figcaption>
+          </figure>
+          <figure class="reveal p-6 rounded-2xl bg-white/5 border border-white/10 shadow-card">
+            <blockquote class="text-brand-soft leading-relaxed">"Banyak colokan, WiFi stabil, makanan variatif dari
+              ramen sampai pizza. Betah WFC seharian."</blockquote>
+            <figcaption class="mt-4 font-semibold text-brand-cream">Pekerja remote</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-8">
+      <div class="flex flex-col lg:flex-row gap-10">
+        <div class="flex-1 space-y-3 reveal">
+          <p class="text-xs uppercase tracking-[0.25em] text-brand-base/80">Visit Us</p>
+          <h2 class="font-heading text-3xl sm:text-4xl text-brand-base">Lokasi &amp; Kontak</h2>
+          <!-- ALAMAT & JAM BUKA -->
+          <p class="text-slate-700">Jl. Pejaten Barat III No.1, Kel. Pejaten Barat, Kec. Pasar Minggu, Jakarta Selatan
+            12510<br />
+            Senin�Jumat 11.00�22.00 WIB | Sabtu�Minggu 09.00�22.00 WIB<br /><span
+              class="text-sm text-slate-600">Patokan:
+              dekat Mall Pejaten Village (The Park Pejaten), di ujung Jalan Pejaten Barat III.</span></p>
+          <div class="grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
+            <div class="p-4 rounded-2xl bg-white shadow-card border border-white/70">
+              <p class="font-semibold text-brand-base">Call</p>
+              <p>0813-6223-1966</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white shadow-card border border-white/70">
+              <p class="font-semibold text-brand-base">WhatsApp</p>
+              <p>0813-6223-1966</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white shadow-card border border-white/70">
+              <p class="font-semibold text-brand-base">Email</p>
+              <p>Tidak tersedia</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white shadow-card border border-white/70">
+              <p class="font-semibold text-brand-base">Linktree</p>
+              <a href="https://linktr.ee/merene.jkt" class="text-brand-base hover:underline">linktr.ee/merene.jkt</a>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <!-- LINK WHATSAPP -->
+            <a href="https://wa.me/6281362231966"
+              class="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-brand-base text-white shadow hover:-translate-y-0.5 hover:shadow-lg transition">
+              <span>WhatsApp</span>
+            </a>
+            <!-- LINK INSTAGRAM -->
+            <a href="https://instagram.com/merene.jkt"
+              class="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-brand-base text-brand-base hover:bg-brand-soft transition">
+              <span>Instagram</span>
+            </a>
+            <!-- CTA GOFOOD -->
+            <a href="https://gofood.link/a/DNd4KQ5"
+              class="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-brand-accent text-brand-dark shadow hover:-translate-y-0.5 hover:shadow-lg transition">
+              <span>Order GoFood</span>
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 reveal">
+          <div class="h-full min-h-[280px] rounded-3xl overflow-hidden shadow-card border border-white/70 bg-white">
+            <iframe title="Map" class="w-full h-full"
+              src="https://www.google.com/maps?q=Merene+Coffee+%26+Eatery+Jakarta+Selatan&output=embed"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/60 bg-white/70">
+    <div
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-600">
+      <p>(c) 2025 Merene Coffee &amp; Eatery. Singgah Sejenak.</p>
+      <p class="mt-2 sm:mt-0">Cozy tiga lantai, rooftop sunset, kopi andalan Butterscotch.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+      mobileMenu.style.maxHeight = isOpen ? '0px' : mobileMenu.scrollHeight + 'px';
+    });
+
+    /* SCROLL ANIMATION */
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-6');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach((el) => {
+        el.classList.add('opacity-0', 'translate-y-6', 'transition', 'duration-700', 'ease-out');
+        observer.observe(el);
+      });
+    }
+
+    /* SMOOTH NAVIGATION + SECTION PULSE */
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const pulse = (el) => {
+      el.classList.add('shadow-[0_0_0_12px_rgba(196,138,90,0.16)]', 'transition-shadow', 'duration-700');
+      setTimeout(() => {
+        el.classList.remove('shadow-[0_0_0_12px_rgba(196,138,90,0.16)]', 'transition-shadow', 'duration-700');
+      }, 900);
+    };
+    anchorLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          mobileMenu.style.maxHeight = '0px';
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(() => pulse(targetEl), 450);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
